@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block titlepage %}
+    Donaciones
+{% endblock  %}
+
+{% block header %}{% endblock %}
+
+{% block container %}
+	<div id="main-wrapper">
+		<div id="main" class="container">
+			
+
+			<div style="text-align:center">           
+           	<iframe width="560" height="315" src="https://www.youtube.com/embed/aHKqhRjRkbE" frameborder="0" allowfullscreen></iframe>
+			<h2>¡Gracias a todos por su apoyo!</h2>
+			
+			<br>
+			<br>
+			
+			<p>Puedes realizar donativos a lascampaña que tenemos actualmente activas. También puedes entregarlo para apoyar los fines generales de nuestra Fundación.</p>
+			<table class="table table-striped">
+              <thead>
+                <tr>
+                  <th><h3>Banco</h3></th>
+                  <th><h3># Cuenta</h3></th>
+                </tr>
+              </thead>
+              <tbody style="text-align:center">
+             	{% for donacion in donaciones %}
+             		<tr>
+             			<td>{{ donacion.banco }}</td>
+             			<td>{{ donacion.cuenta }}</td>
+             		</tr>
+             	{% endfor %}
+              </tbody>
+            </table>	
+
+
+           	
+           	</div>
+		</div>
+	</div>
+	
+{% endblock %}
+

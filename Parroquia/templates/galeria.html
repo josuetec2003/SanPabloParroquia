@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block titlepage %}
+	Galería
+{% endblock  %}
+
+{% block header %}{% endblock %}
+
+{% block container %}
+	<div id="main-wrapper">
+		<div id="main" class="container">
+			<div class="row 200%">
+				<div class="12u">
+
+					<h2>Esto es la galería</h2>
+					
+					<div class="row">
+					{% for video in videos %}					
+						<div class="col-md-4">
+							<h1>Video: {{ video }}</h1>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video.direccion }}" frameborder="0" allowfullscreen></iframe>
+						</div>					
+					{% endfor %}
+					</div>	
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	
+{% endblock %}
+
